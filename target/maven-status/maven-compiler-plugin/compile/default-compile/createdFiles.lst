@@ -1,4 +1,0 @@
-system/model/User.class
-system/DAO/UserDAO.class
-system/controller/UserController.class
-system/service/UserService.class
