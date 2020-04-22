@@ -1,4 +1,4 @@
-package system.DAO;
+package system.dao;
 
 
 import org.springframework.stereotype.Repository;
@@ -10,8 +10,8 @@ import java.util.List;
 @Repository
 public class UserDAO {
 
-    private List<User>  users = Arrays.asList(new User("Admin", "admin"),
-                                                new User("User1", "user1"));
+    private final List<User> users = Arrays.asList(new User("Admin", "admin"),
+            new User("User1", "user1"));
 
     public List<User> getAllUsers() {
         return users;

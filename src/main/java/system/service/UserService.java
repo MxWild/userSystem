@@ -2,17 +2,22 @@ package system.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import system.DAO.UserDAO;
+import system.dao.UserDAO;
+import system.model.User;
 
 import java.util.List;
 
 @Service
 public class UserService {
 
-    @Autowired
-    private UserDAO userDao;
+    private final UserDAO userDao;
 
-    public List getAllUsers() {
+    @Autowired
+    public UserService(UserDAO userDao) {
+        this.userDao = userDao;
+    }
+
+    public List<User> getAllUsers() {
         return userDao.getAllUsers();
     }
 }
